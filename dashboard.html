@@ -1,100 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizSarthi Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BizSarthi Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="dashboard.css">
 </head>
-<body>
-    <div class="dashboard">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2 class="logo">BizSarthi</h2>
-            <nav>
-                <a href="#" class="active"><i class="ri-briefcase-line"></i> Cases</a>
-                <a href="#"><i class="ri-bank-line"></i> Subsidies</a>
-                <a href="#"><i class="ri-user-line"></i> Profile</a>
-                <a href="#"><i class="ri-settings-3-line"></i> Settings</a>
-            </nav>
-        </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header>
-                <h1>Welcome, MSME User</h1>
-                <p>Track your cases and subsidies in one place.</p>
-            </header>
+<body class="bg-gray-50">
 
-            <!-- Quick Stats -->
-            <section class="stats">
-                <div class="stat-card">
-                    <h3>Cases in Progress</h3>
-                    <p class="stat-number">3</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Approved Subsidies</h3>
-                    <p class="stat-number">₹2.5L</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Pending Requests</h3>
-                    <p class="stat-number">5</p>
-                </div>
-            </section>
+  <div class="flex min-h-screen">
 
-            <!-- Active Cases Table -->
-            <section class="table-section">
-                <h2>Active Cases</h2>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Case ID</th>
-                                <th>Type</th>
-                                <th>Status</th>
-                                <th>Last Update</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#C-1023</td>
-                                <td>Tax Compliance</td>
-                                <td><span class="status in-progress">In Progress</span></td>
-                                <td>12 Aug 2025</td>
-                            </tr>
-                            <tr>
-                                <td>#C-1008</td>
-                                <td>Legal Dispute</td>
-                                <td><span class="status resolved">Resolved</span></td>
-                                <td>5 Aug 2025</td>
-                            </tr>
-                            <tr>
-                                <td>#C-1002</td>
-                                <td>Loan Application</td>
-                                <td><span class="status pending">Pending</span></td>
-                                <td>2 Aug 2025</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r hidden md:block">
+      <div class="p-4 font-bold text-indigo-600 text-xl">BizSarthi</div>
+      <nav class="mt-4 space-y-1">
+        <a href="#" class="block px-4 py-2 rounded-md sidebar-link">📂 Cases</a>
+        <a href="#" class="block px-4 py-2 rounded-md sidebar-link">💰 Subsidies</a>
+        <a href="#" class="block px-4 py-2 rounded-md sidebar-link">👤 Profile</a>
+        <a href="#" class="block px-4 py-2 rounded-md sidebar-link">⚙️ Settings</a>
+      </nav>
+    </aside>
 
-            <!-- Subsidy Progress -->
-            <section class="subsidy-section">
-                <h2>Subsidy Applications</h2>
-                <div class="subsidy-card">
-                    <h4>MUDRA Loan</h4>
-                    <div class="progress-bar"><span style="width: 70%"></span></div>
-                    <p>70% Complete</p>
-                </div>
-                <div class="subsidy-card">
-                    <h4>Startup India Seed Fund</h4>
-                    <div class="progress-bar"><span style="width: 40%"></span></div>
-                    <p>40% Complete</p>
-                </div>
-            </section>
-        </main>
-    </div>
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <h3 class="text-sm text-gray-500">Cases in Progress</h3>
+          <p class="text-2xl font-bold text-indigo-600">5</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <h3 class="text-sm text-gray-500">Approved Subsidies</h3>
+          <p class="text-2xl font-bold text-green-600">₹2.5L</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <h3 class="text-sm text-gray-500">Pending Requests</h3>
+          <p class="text-2xl font-bold text-amber-600">3</p>
+        </div>
+      </div>
+
+      <!-- Active Cases -->
+      <div class="card bg-white p-6 rounded-lg shadow mb-6">
+        <h2 class="text-lg font-bold mb-4">Active Cases</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm table-hover">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-4 py-2 text-left">Case ID</th>
+                <th class="px-4 py-2 text-left">Title</th>
+                <th class="px-4 py-2 text-left">Status</th>
+                <th class="px-4 py-2 text-left">Last Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-2">#001</td>
+                <td class="px-4 py-2">GST Compliance</td>
+                <td class="px-4 py-2 text-indigo-600">In Progress</td>
+                <td class="px-4 py-2">2025-08-10</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">#002</td>
+                <td class="px-4 py-2">Loan Subsidy Application</td>
+                <td class="px-4 py-2 text-green-600">Approved</td>
+                <td class="px-4 py-2">2025-08-08</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">#003</td>
+                <td class="px-4 py-2">Labour Law Registration</td>
+                <td class="px-4 py-2 text-amber-600">Pending</td>
+                <td class="px-4 py-2">2025-08-07</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Subsidy Progress -->
+      <div class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-lg font-bold mb-4">Subsidy Applications</h2>
+        <div class="mb-4">
+          <p class="mb-1 text-sm">Technology Upgrade Subsidy</p>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 70%"></div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <p class="mb-1 text-sm">MUDRA Loan</p>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="progress-bar bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 text-sm">Startup India Registration</p>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="progress-bar bg-amber-500 h-2 rounded-full" style="width: 40%"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
 </body>
 </html>
