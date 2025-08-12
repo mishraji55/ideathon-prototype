@@ -1,6 +1,6 @@
-# 🏢 BizSetu – Easing Business Activities for MSMEs
+# 🏢 BizSarthi – Easing Business Activities for MSMEs
 
-**BizSetu** is a centralized, tech-powered platform designed to simplify and empower Micro, Small, and Medium Enterprises (MSMEs) in Delhi by bridging the gap between government compliance, subsidies, and affordable consultancy services.
+**BizSarthi** is a centralized, tech-powered platform designed to simplify and empower Micro, Small, and Medium Enterprises (MSMEs) in Delhi by bridging the gap between government compliance, subsidies, and affordable consultancy services.
 
 ---
 
