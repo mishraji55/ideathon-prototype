@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizSarthi Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">BizSarthi</h2>
+            <nav>
+                <a href="#" class="active"><i class="ri-briefcase-line"></i> Cases</a>
+                <a href="#"><i class="ri-bank-line"></i> Subsidies</a>
+                <a href="#"><i class="ri-user-line"></i> Profile</a>
+                <a href="#"><i class="ri-settings-3-line"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Welcome, MSME User</h1>
+                <p>Track your cases and subsidies in one place.</p>
+            </header>
+
+            <!-- Quick Stats -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Cases in Progress</h3>
+                    <p class="stat-number">3</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Approved Subsidies</h3>
+                    <p class="stat-number">₹2.5L</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <p class="stat-number">5</p>
+                </div>
+            </section>
+
+            <!-- Active Cases Table -->
+            <section class="table-section">
+                <h2>Active Cases</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Last Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#C-1023</td>
+                                <td>Tax Compliance</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>12 Aug 2025</td>
+                            </tr>
+                            <tr>
+                                <td>#C-1008</td>
+                                <td>Legal Dispute</td>
+                                <td><span class="status resolved">Resolved</span></td>
+                                <td>5 Aug 2025</td>
+                            </tr>
+                            <tr>
+                                <td>#C-1002</td>
+                                <td>Loan Application</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>2 Aug 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Subsidy Progress -->
+            <section class="subsidy-section">
+                <h2>Subsidy Applications</h2>
+                <div class="subsidy-card">
+                    <h4>MUDRA Loan</h4>
+                    <div class="progress-bar"><span style="width: 70%"></span></div>
+                    <p>70% Complete</p>
+                </div>
+                <div class="subsidy-card">
+                    <h4>Startup India Seed Fund</h4>
+                    <div class="progress-bar"><span style="width: 40%"></span></div>
+                    <p>40% Complete</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
